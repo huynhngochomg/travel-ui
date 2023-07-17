@@ -1,0 +1,160 @@
+.main {
+    width: 100%;
+    .secTitle {
+        .title {
+            position: relative;
+            width: max-content;
+            color: var(--textColor);
+            margin: 1rem 0;
+            z-index: 2;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0px;
+                height: 5px;
+                width: 50px;
+                background-color: var(--SecondaryColor);
+                z-index: -1;
+            }
+        }
+    }
+    .secContent {
+        justify-content: center;
+        gap: 1.5rem;
+        
+        .singleDestination {
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            background-color: var(--cardBG);
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            overflow: hidden;
+            &:hover {
+                background-color: var(--cardHover);
+                box-shadow: 1 4px 4px rgba(85, 85, 141, 0.549);
+                transform: .3s ease;
+                cursor: pointer;
+            }
+            .imageDiv {
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+                object-fit: cover;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    z-index: 9999;
+                    transition: 2s ease;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .cardInfo {
+                padding: 1rem;
+                .destTitle {
+                    color: var(--blackColor);
+                    font-size: 1.25rem;
+                }
+                .continent {
+                    gap: .5rem;
+                    .icon {
+                        font-size: 18px;
+                        color: var(--textColor);
+                        
+                    }
+                    .name {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: var(--textColor);
+                    }
+                }
+                .fees {
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1px solid var(--greyText);
+                    border-bottom: 1px solid var(--greyText);
+
+                    .grade {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--textColor);
+                        max-width: 100%;
+                        line-height: 20px;
+
+                        small {
+                            text-align: center;
+                            background: var(--gradientColor);
+                            color: var(--whiteColor);
+                            padding: 1px 10px;
+                            border-radius: 1rem;
+                            font-size: 10px;
+                        }
+                    }
+                    .price {
+                        font-size: 2rem;
+                        color: var(--blackColor);
+                    }
+                }
+                .decs {
+                    font-size: 14px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                }
+                .btn {
+                    margin-top: 1rem;
+                    color: var(--whiteColor);
+                    font-weight: 600;
+                    justify-content: space-between;
+                    gap: .5rem;
+
+                    .icon {
+                        align-self: center;
+                        font-size: 18px;
+                    }   
+                }
+            }
+            
+
+        }
+    }
+    
+
+}
+
+// MEDIA QUERIES ========>
+
+@media screen and (min-width: 500px) {
+    .title {
+        font-size: 1.5rem;
+        &::after {
+            width: 140px !important;
+        }
+    }
+    .secContent {
+        grid-template-columns: repeat(2,1fr);
+        .singleDestination {
+            height: auto;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 840px) {
+    .main .secContent .singleDestination .imageDiv {
+        height: 100%;
+    }
+    .secContent {
+        grid-template-columns: repeat(3,1fr);
+        .singleDestination {
+            height: auto;
+        }
+    }
+
+}
