@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
 
               <div className='footerParagraph' data-aos='fade-up'>
-                Mount Shuksan is not an easy mountain to climb, and some choose to complete the task over multiple days, camping on the Sulphide Glacier on the way to the summit and perhaps again on the way back down.
+                Mount Shuksan is not an easy mountain to climb, and some choose to complete the task over multiple days, camping on the Sulphide Glacier on the way to the summit and perhaps again on the way back down!
               </div>
 
               <div className='footerSocials flex' data-aos='fade-up'>
